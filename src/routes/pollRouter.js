@@ -1,8 +1,8 @@
 import express from 'express';
-import { poll } from '../controllers/pollController';
+import { getPoll } from '../controllers/pollController';
 
 const pollRouter = express.Router();
 
-pollRouter.get('/poll', poll);
+pollRouter.get('/poll', getPoll);
 
 export default pollRouter;

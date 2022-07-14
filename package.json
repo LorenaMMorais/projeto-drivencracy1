@@ -1,14 +1,16 @@
 {
   "name": "projeto-drivencracy1",
+  "type": "module",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Lorena Morais",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "axios": "^0.27.2",
     "cors": "^2.8.5",
@@ -16,6 +18,16 @@
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "joi": "^17.6.0",
-    "mongodb": "^4.8.0"
-  }
+    "mongodb": "^4.8.0",
+    "nodemon": "^2.0.1s9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LorenaMMorais/projeto-drivencracy1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LorenaMMorais/projeto-drivencracy1/issues"
+  },
+  "homepage": "https://github.com/LorenaMMorais/projeto-drivencracy1#readme",
+  "description": ""
 }
