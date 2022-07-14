@@ -8,5 +8,5 @@ app.use(json());
 app.use(router);
 
 app.listen(process.env.PORT, () =>{
-    console.log('Servidor online na porta 5000');
+    console.log('Servidor online na porta ' + process.env.PORT);
 });
