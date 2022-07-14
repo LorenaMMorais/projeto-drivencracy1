@@ -5,7 +5,7 @@ const pollSchema = Joi.object({
     expireAt: Joi.string()
 });
 
-export async function getPoll(req, res){
+export async function poll(req, res){
     const body = req.body;
     console.log(body);
     
