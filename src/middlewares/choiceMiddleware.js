@@ -9,4 +9,6 @@ export function choiceValidation(req, res, next){
         res.sendStatus(422);
         return
     }
+
+    next();
 }

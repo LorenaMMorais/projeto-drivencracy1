@@ -1,23 +1,9 @@
 import db from "../db.js";
-import Joi from "joi";
 import { ObjectId } from "mongodb";
 import dayjs from 'dayjs';
 
-const pollSchema = Joi.object({
-    title: Joi.string().required(),
-    expireAt: Joi.string().allow('')
-});
-
 export async function poll(req, res){
     const body = req.body;
-    console.log(body);
-    
-    const validation = pollSchema.validate(body);
-
-    if(validation.error){
-        res.status(422).send('O título precisar ser preenchido!');
-        return
-    }
 
     const poll = {
         title: body.title,
