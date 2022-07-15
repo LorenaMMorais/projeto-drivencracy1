@@ -1,12 +1,6 @@
 import db from '../db.js';
-import joi, { func } from 'joi';
 import { ObjectId } from 'mongodb';
 import dayjs from 'dayjs';
-
-const choiceSchema = joi.object({
-    title:joi.string().trim().required(),
-    pollId: joi.required()
-});
 
 export async function postChoice(req, res){
     const body = req.body;
