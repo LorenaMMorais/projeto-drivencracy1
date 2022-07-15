@@ -1,10 +1,11 @@
 import db from "../db.js";
 import Joi from "joi";
 import { ObjectId } from "mongodb";
+import dayjs from 'dayjs';
 
 const pollSchema = Joi.object({
     title: Joi.string().required(),
-    expireAt: Joi.string()
+    expireAt: Joi.optional()
 });
 
 export async function poll(req, res){
@@ -21,6 +22,10 @@ export async function poll(req, res){
     const poll = {
         title: body.title,
         expireAt: body.expireAt
+    }
+
+    if(poll.expireAt === '' || !poll.expireAt){
+        poll.expireAt = dayjs().add(30, 'day').format('YYYY-MM-DD HH:mm');
     }
     
     try{

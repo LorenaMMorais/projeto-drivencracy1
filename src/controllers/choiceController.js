@@ -43,7 +43,7 @@ export async function postVote(req, res){
     const id = req.params.id;
 
     const vote = {
-        createdAt: dayjs().format('YYYY-M-DD HH-mm'),
+        createdAt: dayjs().format('YYYY-M-DD HH:mm'),
         choiceId: id
     }
 
