@@ -5,7 +5,7 @@ import dayjs from 'dayjs';
 
 const pollSchema = Joi.object({
     title: Joi.string().required(),
-    expireAt: Joi.optional()
+    expireAt: Joi.string().allow('')
 });
 
 export async function poll(req, res){
