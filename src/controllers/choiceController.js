@@ -5,13 +5,6 @@ import dayjs from 'dayjs';
 export async function postChoice(req, res){
     const body = req.body;
 
-    const validation = choiceSchema.validate(body);
-
-    if(validation.error){
-        res.sendStatus(422);
-        return
-    }
-
     const choice = {
         title: body.title,
         pollId: body.pollId
