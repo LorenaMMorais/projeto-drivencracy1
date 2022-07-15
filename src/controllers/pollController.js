@@ -48,7 +48,7 @@ export async function countVotes(req, res){
     const id = req.params.id;
 
     try{
-        const choice = await db.collection('choice').find({pollId: id}).toArray();
+        const choice = await db.collection('choice').find({poolId: id}).toArray();
         const vote = await db.collection('vote').find({}).toArray();
         const counter = [];
         let p = 0;

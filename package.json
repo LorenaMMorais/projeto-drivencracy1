@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Lorena Mendes de Morais",
+  "author": "LorenaMM",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.27.2",
