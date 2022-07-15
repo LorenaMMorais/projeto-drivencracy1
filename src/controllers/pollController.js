@@ -18,7 +18,6 @@ export async function poll(req, res){
         await db.collection('poll').insertOne(poll);
         res.sendStatus(201);
     } catch(e){
-        console.log(e);
         res.sendStatus(500);
     }
 }
